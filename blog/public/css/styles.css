@@ -1,5 +1,23 @@
+.dark-mode {
+  background-color: #2b2d42;
+  color: #f8f7f9;
+}
+
+.dark-btn {
+  position: absolute;
+  top: 6vw;
+  right: 2vw;
+}
+
 body {
   color: #2b2d42;
+}
+
+p::-moz-selection {
+  background-color: #f7ec59;
+}
+p::selection {
+  background-color: #f7ec59;
 }
 
 .container-body {
@@ -11,18 +29,23 @@ body {
 }
 
 .navbar {
+  color: #92dce5;
+  background-color: #2b2d42;
   padding-top: 15px;
   padding-bottom: 15px;
   border: 0;
-  border-radius: 3px;
   margin-bottom: 0;
   font-size: 12px;
   letter-spacing: 5px;
-  background-color: #2b2d42;
 }
 
-.navbar-nav a {
-  color: #92dce5 !important;
+.navbar-brand {
+  color: #92dce5;
+}
+
+.navbar-nav .nav-link {
+  color: #92dce5;
+  text-decoration: none;
 }
 
 .navbar-nav a:hover {
