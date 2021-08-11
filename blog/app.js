@@ -3,6 +3,36 @@ const express = require("express");
 const ejs = require("ejs");
 const _ = require("lodash");
 
+const emojis = [
+  "😀",
+  "💪",
+  "😋",
+  "💃",
+  "💁‍♀️",
+  "🤓",
+  "😍",
+  "💜",
+  "😊",
+  "✅",
+  "🎉",
+  "🎊",
+  "💻",
+  "🍟",
+  "🎀",
+];
+const getRandomEmoji = () => {
+  return emojis[Math.floor(Math.random() * emojis.length)];
+};
+
+function postDate() {
+  var today = new Date();
+  var day = String(today.getDate()).padStart(2, "0");
+  var month = String(today.getMonth() + 1).padStart(2, "0");
+  var year = today.getFullYear();
+
+  return (today = `Posted on: ${day}/${month}/${year}`);
+}
+
 let posts = [];
 
 const homeStartingContent =
@@ -38,10 +68,11 @@ app.get("/compose", function (req, res) {
 
 app.post("/compose", function (req, res) {
   const post = {
-    title: req.body.postTitle,
+    title: `${getRandomEmoji()} ${req.body.postTitle}`,
+    publishDate: `${postDate()}`,
     content: req.body.postBody,
   };
-  posts.push(post);
+  posts.unshift(post);
 
   res.redirect("/");
 });

@@ -7,12 +7,12 @@ body {
   color: #2b2d42;
 }
 
-.post-title {
-  color: #2b2d42;
-}
-
 .post-site {
   text-decoration: none;
+  color: #ff66d8;
+}
+
+.post-site h1:hover {
   color: #ff66d8;
 }
 

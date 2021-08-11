@@ -9,6 +9,7 @@
     <a class="post-site" href="/posts/<%=post.title%>"
       ><h1 class="post-title"><%=post.title%></h1></a
     >
+    <p><%= post.publishDate %></p>
     <p><%=post.content.substring(0, 100) + " ..."%></p>
     <a class="post-site" href="/posts/<%=post.title%>">Read more</a>
   </div>
