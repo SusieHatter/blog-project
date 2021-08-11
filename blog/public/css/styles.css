@@ -7,6 +7,21 @@ body {
   color: #2b2d42;
 }
 
+.post-title {
+  color: #2b2d42;
+}
+
+.post-site {
+  text-decoration: none;
+  color: #ff66d8;
+}
+
+.post-site:hover {
+  background-color: #ff66d8;
+  transition: ease-in 0.3s;
+  color: #f8f7f9;
+}
+
 p::-moz-selection {
   background-color: #f7ec59;
 }
@@ -30,7 +45,6 @@ p::selection {
   margin-bottom: 0;
   font-size: 12px;
   letter-spacing: 5px;
-  height: 6vw;
 }
 
 .navbar-toggler {
@@ -38,7 +52,7 @@ p::selection {
 }
 
 .navbar-brand {
-  color: #92dce5;
+  color: #ff66d8;
 }
 
 .navbar-nav .nav-link {
@@ -47,12 +61,8 @@ p::selection {
 }
 
 .navbar-nav a:hover {
-  border-bottom: 5px dotted #92dce5;
+  background-color: #92dbe57e;
   transition: ease-in 0.3s;
-}
-
-#navbarCollapse {
-  line-height: 2;
 }
 
 .footer-padding {

@@ -1,6 +1,7 @@
 //jshint esversion:6
 const express = require("express");
 const ejs = require("ejs");
+const _ = require("lodash");
 
 let posts = [];
 
@@ -51,6 +52,17 @@ app.get("/about", function (req, res) {
 
 app.get("/contact", function (req, res) {
   res.render("contact", { contactContent: contactContent });
+});
+
+app.get("/posts/:postName", function (req, res) {
+  const requestedTitle = _.lowerCase(req.params.postName);
+  posts.forEach(function (post) {
+    const storedTitle = _.lowerCase(post.title);
+
+    if (storedTitle === requestedTitle) {
+      res.render("post", { title: post.title, content: post.content });
+    }
+  });
 });
 
 app.listen(3000, function () {
