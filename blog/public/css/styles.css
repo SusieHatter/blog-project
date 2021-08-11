@@ -3,12 +3,6 @@
   color: #f8f7f9;
 }
 
-.dark-btn {
-  position: absolute;
-  top: 6vw;
-  right: 2vw;
-}
-
 body {
   color: #2b2d42;
 }
@@ -31,12 +25,16 @@ p::selection {
 .navbar {
   color: #92dce5;
   background-color: #2b2d42;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px 5px;
   border: 0;
   margin-bottom: 0;
   font-size: 12px;
   letter-spacing: 5px;
+  height: 6vw;
+}
+
+.navbar-toggler {
+  background-color: #92dce5;
 }
 
 .navbar-brand {
@@ -49,9 +47,12 @@ p::selection {
 }
 
 .navbar-nav a:hover {
-  border: solid 2px #92dce5;
-  border-radius: 5px;
-  transition: ease-in-out 0.2s;
+  border-bottom: 5px dotted #92dce5;
+  transition: ease-in 0.3s;
+}
+
+#navbarCollapse {
+  line-height: 2;
 }
 
 .footer-padding {
